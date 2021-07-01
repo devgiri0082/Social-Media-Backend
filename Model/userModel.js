@@ -34,6 +34,11 @@ let userSchema = new mongoose.Schema({
     required: false,
     default: [],
   },
+  refreshToken: {
+    type: String,
+    unique: false,
+    required: false,
+  },
 });
 
 let userModel = new mongoose.model("user", userSchema);
